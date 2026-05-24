@@ -1,6 +1,5 @@
 import { prisma } from "./prisma";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export async function withIdempotency<T = any>(
   key: string | null,
   fn: () => Promise<{ status: number; body: T }>
