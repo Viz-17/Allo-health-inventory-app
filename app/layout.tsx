@@ -17,7 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             color:"#e8e6df", textDecoration:"none", display:"flex", alignItems:"center", gap:"8px" }}>
             <span style={{ width:22, height:22, borderRadius:"6px",
               background:"linear-gradient(135deg,#6366f1,#8b5cf6)", display:"inline-block" }} />
-            allo
+            Allo Inventory Reservation Platform
           </a>
           <span style={{ fontSize:"0.75rem", color:"rgba(232,230,223,0.4)", fontFamily:"DM Mono,monospace", letterSpacing:"0.05em" }}>
             inventory platform
