@@ -36,7 +36,7 @@ export async function POST(req: NextRequest) {
 
         return tx.reservation.create({
           data: { productId, warehouseId, quantity, status: "PENDING",
-            expiresAt: new Date(Date.now() + 1 * 60 * 1000) },
+            expiresAt: new Date(Date.now() + 10 * 60 * 1000) },
           include: {
             product: { select: { id: true, name: true, price: true } },
             warehouse: { select: { id: true, name: true, location: true } },
