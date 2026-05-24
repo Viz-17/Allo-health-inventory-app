@@ -1,6 +1,7 @@
 import { prisma } from "./prisma";
 
-export async function withIdempotency<T>(
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export async function withIdempotency<T = any>(
   key: string | null,
   fn: () => Promise<{ status: number; body: T }>
 ): Promise<{ status: number; body: T }> {
@@ -27,7 +28,9 @@ export async function withIdempotency<T>(
         responseBody: JSON.stringify(result.body),
       },
     });
-  } catch {}
+  } catch {
+    // race condition — another request saved it first
+  }
 
   return result;
 }
