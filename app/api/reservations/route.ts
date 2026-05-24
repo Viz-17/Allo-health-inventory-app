@@ -12,7 +12,7 @@ export async function POST(req: NextRequest) {
   const { productId, warehouseId, quantity } = parsed.data;
   const idempotencyKey = req.headers.get("Idempotency-Key");
 
-  const { status, body: responseBody } = await withIdempotency(idempotencyKey, async () => {
+  const { status, body: responseBody } = await <any>(idempotencyKey, async () => {
     const lockKey = `reserve:${productId}:${warehouseId}`;
     const locked = await acquireLock(lockKey, 15);
     if (!locked) return { status: 409, body: { error: "Another reservation in progress. Retry." } };
