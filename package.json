@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "next start",
     "lint": "eslint"
   },
@@ -14,7 +14,7 @@
     "ioredis": "^5.10.1",
     "lucide-react": "^1.16.0",
     "next": "^15.5.18",
-    "prisma": "^5.22.0",
+    
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "uuid": "^14.0.0",
@@ -31,6 +31,7 @@
     "eslint-config-next": "16.1.6",
     "tailwindcss": "^4",
     "ts-node": "^10.9.2",
+    "prisma": "^5.22.0",
     "typescript": "^5"
   },
   "prisma": {
