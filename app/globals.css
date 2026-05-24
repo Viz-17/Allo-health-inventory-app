@@ -1,0 +1,11 @@
+@import "tailwindcss";
+body {
+  font-family: "DM Sans", -apple-system, sans-serif;
+  background: #0a0a0b;
+  color: #e8e6df;
+  min-height: 100vh;
+}
+@keyframes pulse-badge {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
