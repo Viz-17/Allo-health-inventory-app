@@ -6,7 +6,7 @@ When a customer proceeds to checkout, the system temporarily reserves the requir
 
 ## Live Demo
 
-> Vercel URL 
+> [Vercel URL](https://allo-health-inventory-app.vercel.app/) 
 
 ---
 
